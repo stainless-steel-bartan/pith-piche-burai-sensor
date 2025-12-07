@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>pith piche burai</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body bgcolor=white>
+        <div class="all-container">
+        <p class="heading2">kaun karta hai pith piche burai?</p>
+        <p class="paragraph">apka jawab ye raha-:</p>
+        </div>
+                    <div class="all-container"><button class="button2" id="revealButton">REVEAL</button></div>
+            <p id="result" style="display: none;"></p>
+            <a href="page1.html" class="button2" id="tryAgainButton" style="display: none;">Try Again</a>
+        </div>
+
+        <script>
+            document.getElementById('revealButton').addEventListener('click', function() {
+
+                const gender = localStorage.getItem('userGender');
+                const age = localStorage.getItem('userAge');
+                const married = localStorage.getItem('userMarried');
+                
+                let nameList = [];
+                
+                if (age === 'below18') {
+                    nameList = ["padosi","behen", "bhai", "baap", "maa", "chacha", "chachi","mama","mami","friend whose name starts with A","friend whose name starts with S", "friend whose name starts with R","dukaandar","naukarani"];
+                } else if (age === '18-29') {
+                    if (married === 'no') {
+                        nameList = ["padosi","behen", "bhai", "baap", "maa", "chacha", "chachi","mama","mami","friend whose name starts with A","friend whose name starts with S", "friend whose name starts with R", "senior(boss ya teacher)","dukaandar"];
+                    } else {
+                        nameList = ["padosi","behen", "bhai", "baap", "maa", "chacha", "chachi","mama","mami","friend whose name starts with A","friend whose name starts with S", "friend whose name starts with R", "senior(boss ya teacher)","dukaandar","jeevansathi"];
+                    }
+                } else if (age === '30-65') {
+                    if (married === 'yes') {
+                        nameList = ["padosi","behen", "bhai", "baap", "maa", "chacha", "chachi","mama","mami","friend whose name starts with A","friend whose name starts with S", "friend whose name starts with R", "senior(boss ya teacher)","dukaandar","jeevansathi","jo apka vishesh rahasya janta hai"];
+                    } else {
+                        nameList = ["padosi","behen", "bhai", "baap", "maa", "chacha", "chachi","mama","mami","friend whose name starts with A","friend whose name starts with S", "friend whose name starts with R", "senior(boss ya teacher)","dukaandar","jo apka vishesh rahasya janta hai"];
+                    }
+                } else { 
+                    nameList = ["behen", "bhai","friend whose name starts with A","friend whose name starts with S", "friend whose name starts with R", "padosi","dukaandar","jeevansathi","jo apka vishesh rahasya janta hai"];
+                }
+                
+                
+                const randomName = nameList[Math.floor(Math.random() * nameList.length)];
+                
+                
+                document.getElementById('result').innerHTML = 
+                    `<p class="paragraph">${randomName}</p>`;
+                document.getElementById('result').style.display = 'block';
+            });
+            </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'hacker-type';
+    src: url(./assets/ByteBounce.ttf);
+}
+
+.heading{
+    font-family: 'hacker-type';
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-family: 'hacker-type';
+    font-size: 48px;
+    padding: 15px 30px;
+    border: 2px solid black;
+    cursor: pointer;
+        border-radius: 50px;
+    image-rendering: pixelated;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: lime;
+    color: black;
+}
+
+.paragraph{
+    font-family: 'hacker-type';
+    color: black;
+    font-size: 48px;
+    text-align: center;
+}
+
+.heading2{
+    font-family: 'hacker-type';
+    color: black;
+    font-size: 48px;
+    text-align: center;
+}
+
+.heading3{
+    font-family: 'hacker-type';
+    color: lime;
+    font-size: 96px;
+    text-align: center;
+}
+
+.button2{
+    background-color: black;
+    color: white;
+    font-family: 'hacker-type';
+    font-size: 96px;
+    padding: 15px 30px;
+    border: 2px solid black;
+    cursor: pointer;
+        border-radius: 50px;
+    image-rendering: pixelated;
+}
+
+.button2:hover {
+    background-color: lime;
+    color: black;
+}
+
+.all-container{
+    text-align: center;
+}
+
+.form{
+    font-family: 'hacker-type';
+    color: lime;
+    font-size: 48px;
+    text-align: center;
+}
